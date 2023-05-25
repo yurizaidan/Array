@@ -19,16 +19,17 @@ public class EvenNumArray {
 			a=b;
 			b=aux;
 		} 
-		
-		while (a<=b) {
-			if (a%2==0) {
+			
+		for (int index=a;index<=b;index++) {
+			if (index%2==0) {
 				countEvenNum++;
 			}
-			a++;
 		}
+
 		System.out.println("Count of even numbers is:"+countEvenNum);
-		int [] arrayLength = new int[countEvenNum];
 		
+		int [] arrayLength = new int[countEvenNum];
+				
 		while (a<=b) {
 			if (a%2==0) {
 				arrayLength[i]=a;
@@ -36,6 +37,7 @@ public class EvenNumArray {
 			}
 			a++;
 		}
+		i=0;
 		while (i<countEvenNum) {
 			System.out.println("Integer "+"*"+arrayLength[i]+"*"+" and position of element in array is:"+i);
 			i++;
